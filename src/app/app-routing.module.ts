@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AddItemComponent } from './add-item/add-item.component';
+import { AuthGuard } from './auth.guard';
 import { HomealsComponent } from './homeals/homeals.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
@@ -24,17 +25,20 @@ const routes: Routes = [
   {
     path:'homeals',
     pathMatch:'full',
-    component:HomealsComponent
+    component:HomealsComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'additem',
     pathMatch:'full',
-    component:AddItemComponent
+    component:AddItemComponent,
+    canActivate:[AuthGuard]
   },
   {
     path:'updatedelete',
     pathMatch:'full',
-    component:UpdatedeleteComponent
+    component:UpdatedeleteComponent,
+    canActivate:[AuthGuard]
   }
   
 ];

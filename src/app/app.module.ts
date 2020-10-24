@@ -12,6 +12,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { HeaderComponent } from './header/header.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { UpdatedeleteComponent } from './updatedelete/updatedelete.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { UpdatedeleteComponent } from './updatedelete/updatedelete.component';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

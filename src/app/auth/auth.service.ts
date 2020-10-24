@@ -26,6 +26,7 @@ export class AuthService {
 
   setId(id: string){
     localStorage.setItem('id', id);
+    console.log("From ID",id)
     return true;
   }
 
@@ -40,6 +41,10 @@ export class AuthService {
       headers: headerObject
     };
     return httpOptions;
+  }
+
+  loggedIn(){
+    return !!localStorage.getItem('id');
   }
 
   addPicture(file, id): Observable<any>  {
