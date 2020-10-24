@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HomealsFrontEnd"
+    }
+  },
+  "defaultProject": "HomealsFrontEnd",
+  "cli": {
+    "analytics": false
+  }
 }

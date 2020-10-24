@@ -1,0 +1,68 @@
+<div class="background">
+    <div class="container">
+        <div class="p-4 m-4">
+            <div class="col-lg-4 mt-4 border mb-4 mx-auto rounded pt-4"  style="background-color: beige;">
+                <div class="text-center col">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Shopping_cart_with_food_clip_art_2.svg/307px-Shopping_cart_with_food_clip_art_2.svg.png"
+                        alt="" class="" style="height: 150px;">
+                    <div class="display-8">Homeals Chef Registration</div>
+                    <hr>
+                </div>
+                <h3 hidden class="alert alert-light border mt-4 mb-4 rounded">Login Here</h3>
+                <form>
+
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input required type="text" name="name" ngModel id="name" value="" class=" form-control-sm form-control"
+                            placeholder="Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Age</label>
+                        <input required type="text" name="age" ngModel id="" value="" class=" form-control-sm form-control"
+                            placeholder="Your Age">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Phone Number</label>
+                        <input required type="text" name="phno" ngModel id="" value="" class=" form-control-sm form-control"
+                            placeholder="Your Phone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Chef Group Name</label>
+                        <input required type="text" ngModel name="groupname" id="" value=""
+                            class=" form-control-sm form-control" placeholder="Your Identification Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Chef Address</label>
+                        <input required type="text" name="address" ngModel id="" value="" class=" form-control-sm form-control"
+                            placeholder="Your Address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input required type="email" name="email" ngModel id="" value="" class=" form-control-sm form-control"
+                            placeholder="Your Username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="password" ngModel id="" class="form-control form-control-sm"
+                            placeholder="Your Password">
+                    </div>
+
+
+                    <div class="d-flex justify-content-center links" style="font-size: small;">
+                        Already a Chef? <a [routerLink]="['/signin']" class="ml-2">Login</a>
+                    </div>
+                    <hr>
+                    <div class="form-group" style="text-align: center;">
+                        <input class="btn btn-sm btn-success col-lg-4" type="submit" value="Join Homeals">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+<app-header></app-header>
+<br />
+<div  *ngIf = "load"   >
+  <app-loader></app-loader>
+</div>
+<div class="container">
+  <form #addMenuForm="ngForm">
+    <p style="color: red;">Note : One seller can add only one Menu and Menu is must to add Items.</p>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="name">Menu Name</label>
+        <input type="text" class="form-control" name = "menuName" ngModel required>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="discription">Discription</label>
+        <input type="text" class="form-control" name = "description" ngModel required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="AddMenu(addMenuForm.value)">Add Menu</button>
+  </form>
+  <hr>
+  <form #additemform="ngForm">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="Item name">Item Name</label>
+        <input type="text" class="form-control" name = "name" ngModel required>
+      </div>
+      <div class="form-group col-md-6">
+
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="Item name">Image</label><br/>
+        <input type="file" name="image" name ="picture" id="pic" accept="image/*" ngModel (change) ="fileSelected($event)">
+        <p *ngIf = "exterror" style="color: red;"> Please Upload a File of Type png, jpeg, jpg </p>
+      </div>
+          
+
+      <div class="form-group col-md-6">
+          
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" name = "price" ngModel>
+      </div>
+      <div class="form-group col-md-6">
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for="sel1">Select Category:</label>
+        <select class="form-control" name = "type" ngModel>
+          <option value="veg">Veg</option>
+          <option value="nonveg">Non Veg</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for="sel1">Select Type:</label>
+        <select class="form-control" name="categories" ngModel>
+          <option>Breakfast</option>
+          <option>Chinese Food</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6">
+
+      </div>
+      <div class="form-group col-md-6">
+        <label for="price">Description</label>
+        <input type="text" class="form-control" name="description" ngModel>
+      </div>
+      <div class="form-group col-md-6">
+
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="AddItem(additemform.value)">Add Item</button>
+  </form>
+</div>
