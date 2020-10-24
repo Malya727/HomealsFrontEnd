@@ -44,7 +44,9 @@ export class AuthService {
   }
 
   loggedIn(){
-    return !!localStorage.getItem('id');
+    
+    console.log("From Auth Status",!!localStorage.getItem('token'))
+    return !!localStorage.getItem('token');
   }
 
   addPicture(file, id): Observable<any>  {

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AddItemComponent } from './add-item/add-item.component';
 import { AuthGuard } from './auth.guard';
 import { HomealsComponent } from './homeals/homeals.component';
+import { LoaderComponent } from './loader/loader.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { UpdatedeleteComponent } from './updatedelete/updatedelete.component';
