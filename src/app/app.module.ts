@@ -13,6 +13,8 @@ import { HeaderComponent } from './header/header.component';
 import { AddItemComponent } from './add-item/add-item.component';
 import { UpdatedeleteComponent } from './updatedelete/updatedelete.component';
 import { AuthGuard } from './auth.guard';
+import { ErrorComponent } from './error/error.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AuthGuard } from './auth.guard';
     LoaderComponent,
     HeaderComponent,
     AddItemComponent,
-    UpdatedeleteComponent
+    UpdatedeleteComponent,
+    ErrorComponent,
+    OrdersComponent
   ],
   imports: [
     BrowserModule,

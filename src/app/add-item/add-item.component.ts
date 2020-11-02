@@ -29,12 +29,12 @@ export class AddItemComponent implements OnInit {
         if(data["success"]){
           console.log(data);
           window.alert("Item Added");
-          location.reload()
+          // location.reload()
           let res = data.data;
           let id = res._id;
           this.authService.addPicture(this.files, id).subscribe(result =>{
             if(result['success']){
-              console.log(result);
+              console.log("after Uploading Photo",result);
               window.alert("Item Added");
             }
           });

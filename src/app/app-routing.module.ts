@@ -4,6 +4,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { AuthGuard } from './auth.guard';
 import { HomealsComponent } from './homeals/homeals.component';
 import { LoaderComponent } from './loader/loader.component';
+import { OrdersComponent } from './orders/orders.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { UpdatedeleteComponent } from './updatedelete/updatedelete.component';
@@ -39,6 +40,12 @@ const routes: Routes = [
     path:'updatedelete',
     pathMatch:'full',
     component:UpdatedeleteComponent,
+    canActivate:[AuthGuard]
+  },
+  {
+    path:'orders',
+    pathMatch:'full',
+    component:OrdersComponent,
     canActivate:[AuthGuard]
   }
   
