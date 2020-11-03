@@ -29,6 +29,8 @@ export class SigninComponent implements OnInit {
           console.log("here", data['success'])
           if(data['success']){
             this.authService.setToken(data["token"]);
+            // let da = data["data"];
+            // localStorage.setItem('name',da["name"]);
             this.t= data["token"];
             this.getId(this.t);
             this.route.navigate(["/homeals"]);
